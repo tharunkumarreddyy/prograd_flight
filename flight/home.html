@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <style>
+        .navbar {
+            background-color: #f8f9fa;
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+        }
+        
+        .navbar-nav .nav-link {
+            font-weight: bold;
+        }
+        
+        .profile-image {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .intro-section {
+            background-image: url('intro.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .intro-section h1 {
+            color: #ffffff;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .intro-section .btn {
+            padding: 12px 30px;
+            font-size: 18px;
+            background-color: #ff5722;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+        
+        .date-timing-section {
+            padding: 50px;
+        }
+        
+        .date-timing-section h2 {
+            margin-bottom: 20px;
+        }
+        
+        .date-timing-section .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .date-timing-section label {
+            display: block;
+            font-weight: bold;
+        }
+        
+        .date-timing-section select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+        
+        .date-timing-section .btn {
+            padding: 12px 30px;
+            font-size: 18px;
+            background-color: #ff5722;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 576px) {
+            .date-timing-section .form-group {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">flyhigh</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="adminsignup.html">Admin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="signin.html">Sign In</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="signup.html">Sign Up</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="user.jpeg" alt="Profile" class="profile-image">
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="profileDropdown">
+                        <a class="dropdown-item" href="edit.html">Edit Profile</a>
+                        <a class="dropdown-item" href="#">My Bookings</a>
+                        <a class="dropdown-item" href="chngpassword.html">Change Password</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="home.html">Sign Out</a>
+                    </div>
+                </li>
+
+
+            </ul>
+        </div>
+    </nav>
+    <section class="intro-section">
+        <div class="container">
+            <h1>Welcome to flyhigh</h1>
+            <a href="#select-date" class="btn">Enquiry / Book Now</a>
+        </div>
+    </section>
+
+    <section class="date-timing-section" id="select-date">
+        <form action="flightdetails.php" method="POST">
+            <section class="date-timing-section" id="select-date">
+                <div class="container">
+                    <h2>Select Date and Timing</h2>
+                    <div class="form-group">
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="timing">Timing:</label>
+                        <select id="timing" class="form-control">
+                            <option value="9:00 AM">9:00 AM</option>
+                            <option value="11:00 AM">11:00 AM</option>
+                            <option value="2:00 PM">2:00 PM</option>
+                            <option value="4:00 PM">4:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+                <a href="flight.html">Submit</a>
+            </section>
+
+            <div class="additional-div">
+                <h3>pick locations</h3>
+                <ul>
+                    <li>
+                        <a href="#section1">Bengaluru-Delhi</a>
+                    </li>
+                    <li>
+                        <a href="#section2">Bengaluru-Kolkata</a>
+                    </li>
+                    <li>
+                        <a href="#section3">Bengaluru-Mumbai</a>
+                    </li>
+                    <li>
+                        <a href="#section3">Bengaluru-chennai</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="container">
+
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>

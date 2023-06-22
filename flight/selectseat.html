@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Seat Selection Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .seatSelectionForm {
+            padding: 0;
+        }
+        
+        .seat-label {
+            display: inline-block;
+            padding: 5px;
+            margin: 2px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 12px;
+        }
+        
+        .selected {
+            background-color: #ffc107;
+        }
+        
+        .seat-selection {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        
+        .seat-selection {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .seat-selection .row {
+            padding: 5px;
+        }
+        
+        .seat-label {
+            display: inline-block;
+            padding: 5px 8px;
+            margin: 2px 5px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 12px;
+        }
+        
+        .user-details label {
+            font-size: 12px;
+        }
+        
+        .user-details input[type="text"],
+        .user-details input[type="email"],
+        .user-details input[type="tel"] {
+            font-size: 12px;
+            padding: 5px;
+        }
+        
+        @media (max-width: 767px) {
+            .form-container {
+                flex-direction: column;
+            }
+            .user-details {
+                padding-left: 0;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .form-container {
+                display: flex;
+                justify-content: space-between;
+            }
+            .seat-selection {
+                flex-basis: 50%;
+            }
+            .user-details {
+                flex-basis: 50%;
+                padding-left: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <form id="seatSelectionForm" class="seat-selection">
+                <div class="row">
+                    <div class="col">
+                        <label class="seat-label" onclick="toggleSeatSelection(1)">01</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(2)">02</label>&nbsp;
+                        <label class="seat-label" onclick="toggleSeatSelection(3)">03</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(4)">04</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(5)">05</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="seat-label" onclick="toggleSeatSelection(6)">06</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(7)">07</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(8)">08</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(9)">09</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(10)">10</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="seat-label" onclick="toggleSeatSelection(11)">11</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(12)">12</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(13)">13</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(14)">14</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(15)">15</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="seat-label" onclick="toggleSeatSelection(16)">16</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(17)">17</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(18)">18</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(19)">19</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(20)">20</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="seat-label" onclick="toggleSeatSelection(21)">21</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(22)">22</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(23)">23</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(24)">24</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(25)">25</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="seat-label" onclick="toggleSeatSelection(26)">26</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(27)">27</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(28)">28</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(29)">29</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(30)">30</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="seat-label" onclick="toggleSeatSelection(31)">31</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(32)">32</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(33)">33</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(34)">34</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(35)">35</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="seat-label" onclick="toggleSeatSelection(36)">36</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(37)">37</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(38)">38</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(39)">39</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(40)">40</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="seat-label" onclick="toggleSeatSelection(41)">41</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(42)">42</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(43)">43</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(44)">44</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(45)">45</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="seat-label" onclick="toggleSeatSelection(46)">46</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(47)">47</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(48)">48</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(49)">49</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(50)">50</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="seat-label" onclick="toggleSeatSelection(51)">51</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(52)">52</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(53)">53</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(54)">54</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(55)">55</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="seat-label" onclick="toggleSeatSelection(56)">56</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(57)">57</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(58)">58</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(59)">59</label>
+                        <label class="seat-label" onclick="toggleSeatSelection(60)">60</label>
+                    </div>
+                </div>
+
+            </form>
+
+            <form id="userDetailsForm" class="user-details">
+                <div class="form-group">
+                    <label for="flightId">Flight ID:</label>
+                    <input type="text" id="flightId" name="flightId" class="form-control" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="numSeats">Number of Seats Selected:</label>
+                    <input type="text" class="form-control" id="numSeats" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="totalFare">Total Fare:</label>
+                    <input type="text" class="form-control" id="totalFare" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="boardingPoint">Boarding Point:</label>
+                    <input type="text" class="form-control" id="boardingPoint" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="droppingPoint">Dropping Point:</label>
+                    <input type="text" class="form-control" id="droppingPoint" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" class="form-control" id="fullName">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" class="form-control" id="phone">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Make Payment</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        var selectedSeats = [];
+
+        function toggleSeatSelection(seat) {
+            var seatLabel = document.querySelector('label[onclick="toggleSeatSelection(' + seat + ')"]');
+            seatLabel.classList.toggle('selected');
+
+            var index = selectedSeats.indexOf(seat);
+            if (index === -1) {
+                selectedSeats.push(seat);
+            } else {
+                selectedSeats.splice(index, 1);
+            }
+
+            updateFormFields();
+        }
+
+        function updateFormFields() {
+            document.getElementById('numSeats').value = selectedSeats.length;
+            var price = localStorage.getItem('price');
+            var flightid = localStorage.getItem('flightId');
+            var boarding = localStorage.getItem('boarding');
+            var destination = localStorage.getItem('destination');
+            var totalFare = selectedSeats.length * parseFloat(price);
+            document.getElementById('totalFare').value = totalFare.toFixed(2);
+            document.getElementById('flightid').value = flightid;
+            document.getElementById('boarding').value = boarding;
+            document.getElementById('destination').value = destination;
+
+        }
+        document.getElementById('seatSelectionForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var numSeats = selectedSeats.length;
+            var totalFare = 0;
+            document.getElementById('numSeats').value = '';
+            document.getElementById('totalFare').value = '';
+            selectedSeats = [];
+            var seatLabels = document.querySelectorAll('.seat-label');
+            seatLabels.forEach(function(label) {
+                label.classList.remove('selected');
+            });
+        });
+        document.getElementById('makePaymentButton').addEventListener('click', function(event) {
+            event.preventDefault();
+            var flightid = document.getElementById('flightid').value;
+            var seats = document.getElementById('seats').value;
+            var totalfare = document.getElementById('totalfare').value;
+            var boardingPoint = document.getElementById('boardingPoint').value;
+            var droppingPoint = document.getElementById('droppingPoint').value;
+            var fullName = document.getElementById('fullName').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+
+
+            localStorage.setItem('flightid', flightid);
+            localStorage.setItem('seats', seats);
+            localStorage.setItem('totalfare', totalfare);
+            localStorage.setItem('boardingPoint', boardingPoint);
+            localStorage.setItem('droppingPoint', droppingPoint);
+            localStorage.setItem('fullName', fullName);
+            localStorage.setItem('email', email);
+            localStorage.setItem('phone', phone);
+
+            window.location.href = 'payment.html';
+        });
+
+        document.getElementById('userDetailsForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var boardingPoint = document.getElementById('boardingPoint').value;
+            var droppingPoint = document.getElementById('droppingPoint').value;
+            var fullName = document.getElementById('fullName').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+
+            document.getElementById('boardingPoint').value = '';
+            document.getElementById('droppingPoint').value = '';
+            document.getElementById('fullName').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('phone').value = '';
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+
+
+</html>
